@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Food-Sense/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/Food-Sense/static/js/main.ae2bdb44.chunk.js",
+    "main.js.map": "/Food-Sense/static/js/main.ae2bdb44.chunk.js.map",
+    "runtime-main.js": "/Food-Sense/static/js/runtime-main.aed47445.js",
+    "runtime-main.js.map": "/Food-Sense/static/js/runtime-main.aed47445.js.map",
+    "static/css/2.af3c1da9.chunk.css": "/Food-Sense/static/css/2.af3c1da9.chunk.css",
+    "static/js/2.151abfd3.chunk.js": "/Food-Sense/static/js/2.151abfd3.chunk.js",
+    "static/js/2.151abfd3.chunk.js.map": "/Food-Sense/static/js/2.151abfd3.chunk.js.map",
+    "index.html": "/Food-Sense/index.html",
+    "precache-manifest.666da226cd3e78ca27d574dc922f0b16.js": "/Food-Sense/precache-manifest.666da226cd3e78ca27d574dc922f0b16.js",
+    "service-worker.js": "/Food-Sense/service-worker.js",
+    "static/css/2.af3c1da9.chunk.css.map": "/Food-Sense/static/css/2.af3c1da9.chunk.css.map",
+    "static/css/main.5ecd60fb.chunk.css.map": "/Food-Sense/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.151abfd3.chunk.js.LICENSE.txt": "/Food-Sense/static/js/2.151abfd3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.aed47445.js",
+    "static/css/2.af3c1da9.chunk.css",
+    "static/js/2.151abfd3.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.ae2bdb44.chunk.js"
+  ]
+}
