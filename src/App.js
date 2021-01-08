@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Recipe from './Recipe'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Navbar, Container, InputGroup, FormControl, Button } from 'react-bootstrap';
+import { Navbar, Container, InputGroup, FormControl, Button, Spinner } from 'react-bootstrap';
 
 const App = () => {
 
@@ -11,15 +11,18 @@ const App = () => {
   const [recipies, setRecipies] = useState([]);
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState("chips");
+  const [loadingData, setLoadingData] = useState(false)
 
   useEffect(() => {
     getRecipies();
   }, [query]);
 
   const getRecipies = async () => {
+    setLoadingData(true)
     const response = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`);
     const data = await response.json();
     setRecipies(data.hits);
+    setLoadingData(false)
   }
 
   const updateSearch = event => {
@@ -46,7 +49,7 @@ const App = () => {
             // value={search}
           />
           <InputGroup.Append>
-          {search && <Button variant="outline-primary" onClick={getSearch}>Button</Button>}
+          {search && <Button variant="outline-primary" onClick={getSearch}>Search</Button>}
             {/* <Button variant="outline-primary" onClick={getSearch}>Button</Button> */}
           </InputGroup.Append>
         </InputGroup>
@@ -61,7 +64,10 @@ const App = () => {
             videoURL={recipe.recipe.url}
             ingredientLines={recipe.recipe.ingredientLines} />
         ))}
-        {recipies.length === 0 && <h3>
+        {loadingData && 
+        <Spinner animation="border" variant="danger" />
+        }
+        {(loadingData == false && recipies.length === 0) && <h3>
           Nothing to Show. Sorry !
         </h3>}
       </div>
